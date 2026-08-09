@@ -1,4 +1,4 @@
-package PageObjects;
+package pageobjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -12,18 +12,18 @@ public class OrderPage {
     private WebDriverWait wait;
 
     //  Локатор формы для заказа
-    private By orderForm = By.className("Order_Form__17u6u");
+    private static final By orderForm = By.className("Order_Form__17u6u");
 
     // Локаторы полей для ввода данных
-    private By nameField = By.xpath(".//input[@placeholder='* Имя']");
-    private By surnameField = By.xpath(".//input[@placeholder='* Фамилия']");
-    private By addressField = By.xpath(".//input[@placeholder='* Адрес: куда привезти заказ']");
-    private By subwayField = By.xpath(".//input[@placeholder='* Станция метро']");
-    private By subwayList = By.className("select-search__value");
-    private By phoneField = By.xpath(".//input[@placeholder='* Телефон: на него позвонит курьер']");
+    private static final By nameField = By.xpath(".//input[@placeholder='* Имя']");
+    private static final By surnameField = By.xpath(".//input[@placeholder='* Фамилия']");
+    private static final By addressField = By.xpath(".//input[@placeholder='* Адрес: куда привезти заказ']");
+    private static final By subwayField = By.xpath(".//input[@placeholder='* Станция метро']");
+    private static final By subwayList = By.className("select-search__value");
+    private static final By phoneField = By.xpath(".//input[@placeholder='* Телефон: на него позвонит курьер']");
 
     // Локатор кнопки Далее
-    private By nextButton = By.xpath(".//button[text()='Далее']");
+    private static final By nextButton = By.xpath(".//button[text()='Далее']");
 
     public OrderPage(WebDriver driver){
         this.driver = driver;

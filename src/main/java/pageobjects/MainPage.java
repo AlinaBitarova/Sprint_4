@@ -1,4 +1,4 @@
-package PageObjects;
+package pageobjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -17,22 +17,22 @@ public class MainPage {
     private WebDriverWait wait;
 
     // Вопросы о важном (список)
-    private By faqList = By.className ("accordion");
+    private static final By faqList = By.className ("accordion");
 
     // Локатор для вопросов
-    private By faqListQuestions  = By.className("accordion__button");
+    private static final By faqListQuestions  = By.className("accordion__button");
 
     // Локатор для ответов
-    private By faqListAnswers  = By.className("accordion__panel");
+    private static final By faqListAnswers  = By.className("accordion__panel");
 
     // Локатор кнопки заказать (верхняя)
-    private By orderButtonTop = By.className("Button_Button__ra12g");
+    private static final By orderButtonTop = By.className("Button_Button__ra12g");
 
     // Локатор кнопки заказать (нижняя)
-    private By orderButtonBottom = By.xpath(".//button[@class='Button_Button__ra12g Button_Middle__1CSJM']");
+    private static final By orderButtonBottom = By.xpath(".//button[@class='Button_Button__ra12g Button_Middle__1CSJM']");
 
     // Локатор для куки
-    private By cookieButton = By.className("App_CookieButton__3cvqF");
+    private static final By cookieButton = By.className("App_CookieButton__3cvqF");
 
     public MainPage(WebDriver driver){
         this.driver = driver;

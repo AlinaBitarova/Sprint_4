@@ -1,4 +1,4 @@
-package PageObjects;
+package pageobjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -12,28 +12,28 @@ public class AboutRentPage {
     private WebDriverWait wait;
 
     //  Локатор формы об аренде
-    private By rentForm = By.className("Order_Form__17u6u");
+    private static final By rentForm = By.className("Order_Form__17u6u");
 
     // Локаторы полей для ввода данных
-    private By dateField = By.xpath(".//input[@placeholder='* Когда привезти самокат']");
-    private By calendarObject = By.className("react-datepicker");
-    private By rentDurationField = By.className("Dropdown-placeholder");
-    private By rentDurationList = By.className("Dropdown-menu");
-    private By blackScooterCheckbox = By.xpath(".//input[@id='black']");
-    private By greyScooterCheckbox = By.xpath(".//input[@id='grey']");
-    private By noteForCourierField = By.xpath(".//input[@placeholder='Комментарий для курьера']");
+    private static final By dateField = By.xpath(".//input[@placeholder='* Когда привезти самокат']");
+    private static final By calendarObject = By.className("react-datepicker");
+    private static final By rentDurationField = By.className("Dropdown-placeholder");
+    private static final By rentDurationList = By.className("Dropdown-menu");
+    private static final By blackScooterCheckbox = By.xpath(".//input[@id='black']");
+    private static final By greyScooterCheckbox = By.xpath(".//input[@id='grey']");
+    private static final By noteForCourierField = By.xpath(".//input[@placeholder='Комментарий для курьера']");
 
     // Локатор кнопки Заказать
-    private By orderButton = By.xpath(".//button[@class='Button_Button__ra12g Button_Middle__1CSJM']");
+    private static final By orderButton = By.xpath(".//button[@class='Button_Button__ra12g Button_Middle__1CSJM']");
 
     // Окно подтверждения заказ
-    private By confirmationWindow = By.className("Order_Modal__YZ-d3");
+    private static final By confirmationWindow = By.className("Order_Modal__YZ-d3");
 
     // Локатор кнопки подтверждения заказа
-    private By orderConfirmationButton = By.xpath(".//button[text()='Да']");
+    private static final By orderConfirmationButton = By.xpath(".//button[text()='Да']");
 
     // Локатор окна после успешного создания заказа
-    private By successfulOrderWindow = By.className("Order_Modal__YZ-d3");
+    private static final By successfulOrderWindow = By.className("Order_Modal__YZ-d3");
 
     public AboutRentPage(WebDriver driver){
         this.driver = driver;

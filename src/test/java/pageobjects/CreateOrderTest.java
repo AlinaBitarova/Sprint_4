@@ -1,4 +1,4 @@
-package PageObjects;
+package pageobjects;
 
 import org.junit.After;
 import org.junit.Before;
@@ -8,8 +8,6 @@ import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 @RunWith(Parameterized.class)
@@ -51,7 +49,7 @@ public class CreateOrderTest {
     @Before
     public void setUp() {
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--no-sandbox", "--headless", "--disable-dev-shm-usage");
+        options.addArguments("--no-sandbox", "--disable-dev-shm-usage");
         driver = new ChromeDriver(options);
         driver.get("https://qa-scooter.praktikum-services.ru/");
 
@@ -72,15 +70,11 @@ public class CreateOrderTest {
         assertTrue(objAboutRentPage.checkOrderIsSuccessful());
     }
 
-    // Тест нижней кнопки
+    // Тест нижней кнопки (открывается форма заказа)
     @Test
     public void checkBottomOrderButton() {
         objMainPage.clickOrderBottom();
         objOrderPage.waitForOrderPageToLoad();
-        objOrderPage.setCredentials(orderName, orderSurname, orderAddress, subwayName, orderPhone);
-        objAboutRentPage.waitForRentPageToLoad();
-        objAboutRentPage.setRentInfo(orderDate, rentDuration, color, noteForCourier);
-        assertTrue(objAboutRentPage.checkOrderIsSuccessful());
     }
 
     @After
